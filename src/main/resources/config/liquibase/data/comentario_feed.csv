@@ -1,0 +1,11 @@
+id;comentario;fecha;me_gusta;seguir
+1;../data/blob/hipster.txt;2019-07-21;false;false
+2;../data/blob/hipster.txt;2019-07-21;false;true
+3;../data/blob/hipster.txt;2019-07-21;true;false
+4;../data/blob/hipster.txt;2019-07-21;false;false
+5;../data/blob/hipster.txt;2019-07-21;true;true
+6;../data/blob/hipster.txt;2019-07-21;true;true
+7;../data/blob/hipster.txt;2019-07-21;true;false
+8;../data/blob/hipster.txt;2019-07-20;true;true
+9;../data/blob/hipster.txt;2019-07-21;true;true
+10;../data/blob/hipster.txt;2019-07-21;true;false

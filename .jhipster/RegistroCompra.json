@@ -1,0 +1,56 @@
+{
+    "name": "RegistroCompra",
+    "fields": [
+        {
+            "fieldName": "consumoMarket",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "registroCompra",
+            "relationshipName": "miembro",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "facturacion",
+            "otherEntityRelationshipName": "registroCompra",
+            "relationshipName": "facturacion",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "reservas",
+            "otherEntityRelationshipName": "registroCompra",
+            "relationshipName": "reservas",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "entradaInvitados",
+            "otherEntityRelationshipName": "registroCompra",
+            "relationshipName": "entradaInvitados",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "entradaMiembros",
+            "otherEntityRelationshipName": "registroCompra",
+            "relationshipName": "entradaMiembros",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190721193606",
+    "entityTableName": "registro_compra",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}

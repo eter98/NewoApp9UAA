@@ -1,0 +1,56 @@
+{
+    "name": "Reservas",
+    "fields": [
+        {
+            "fieldName": "registroFechaEntrada",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "registroFechaSalida",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "estadoReserva",
+            "fieldType": "EstadoReservad",
+            "fieldValues": "Disponible,Reservado,Ocupado,Extendido,Cerrado"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "registroCompra",
+            "otherEntityRelationshipName": "reservas",
+            "relationshipName": "registroCompra"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "reservas",
+            "relationshipName": "miembro",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "espaciosReserva",
+            "otherEntityRelationshipName": "reservas",
+            "relationshipName": "espacio",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20190721193604",
+    "entityTableName": "reservas",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}

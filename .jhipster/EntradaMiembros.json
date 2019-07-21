@@ -1,0 +1,65 @@
+{
+    "name": "EntradaMiembros",
+    "fields": [
+        {
+            "fieldName": "registroFecha",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tipoEntrada",
+            "fieldType": "TipoEntradad",
+            "fieldValues": "INGRESO,SALIDA"
+        },
+        {
+            "fieldName": "tipoIngreso",
+            "fieldType": "TipoIngresod",
+            "fieldValues": "Espacio_Libre,Reserva,Oficina"
+        },
+        {
+            "fieldName": "tiempoMaximo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "registroCompra",
+            "otherEntityRelationshipName": "entradaMiembros",
+            "relationshipName": "registroCompra"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "entradaMiembros",
+            "relationshipName": "miembro",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "espacioLibre",
+            "otherEntityRelationshipName": "entradaMiembros",
+            "relationshipName": "espacio",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "espaciosReserva",
+            "otherEntityRelationshipName": "entradaMiembros",
+            "relationshipName": "espacioReserva",
+            "otherEntityField": "nombre"
+        }
+    ],
+    "changelogDate": "20190721193557",
+    "entityTableName": "entrada_miembros",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch"
+}
